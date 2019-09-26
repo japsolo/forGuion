@@ -1,0 +1,1 @@
+console.log('Andamo\' rulay, pide que hay');
