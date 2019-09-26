@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body style="font-size: 1em;">
+	<button type="button" id="less">-</button>
+	<button type="button" id="more">+</button>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, numquam! Voluptas culpa id nam? Veritatis, ad architecto maxime, maiores impedit sapiente inventore corporis numquam nesciunt quae suscipit? Eum, ullam omnis.</p>
+	<script>
+		let body = document.querySelector('body');
+		let btns = Array.from(document.querySelectorAll('button'));
+
+		let bodySize = (letter = 's') => {
+			let actualSize = Number(body.style.fontSize.replace('em', ''));			
+			body.style.fontSize = `${letter === 'b' ? actualSize + 0.1 : actualSize - 0.1}em`;	
+		}
+
+		let bigger = () => bodySize('b');
+		let smaller = () => bodySize();
+
+		btns.forEach(function (btn) {
+			if (btn.id === 'less') {				
+				btn.addEventListener('click', smaller);
+			} 
+			if (btn.id === 'more') {				
+				btn.addEventListener('click', bodySize.bind(null, 'b'));
+			} 
+		})
+	</script>
+</body>
+</html>

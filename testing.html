@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body style="font-size: 10px;">
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, numquam! Voluptas culpa id nam? Veritatis, ad architecto maxime, maiores impedit sapiente inventore corporis numquam nesciunt quae suscipit? Eum, ullam omnis.</p>
+	<button type="button" id="12">12</button>
+	<button type="button" id="14">14</button>
+	<button type="button" id="16">16</button>
+
+	<script>
+		let body = document.querySelector('body');
+		let btns = Array.from(document.querySelectorAll('button'));
+
+		let makeSizer = (n) => {
+			body.style.fontSize = `${n}px`;	
+		}
+
+		btns.forEach(function (btn) {
+			btn.addEventListener('click', makeSizer.bind(null, btn.id))
+		})
+	</script>
+</body>
+</html>

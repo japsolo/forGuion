@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body style="font-size: 10px;">
+	
+
+	<script>
+		async function load() {
+			let url = 'https://api.chucknorris.io/jokes/random';
+			try {
+				let response = await fetch(url).then(r => r.json()).then(d => d);
+				return response;
+			} catch (e) {
+				return e.message;
+			}
+		}
+	
+		console.log(load());
+		
+	</script>
+</body>
+</html>

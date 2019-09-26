@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flex</title>
+	<link rel="stylesheet" href="css/x.css">
+	<style>
+		.container {
+			font-family: sans-serif;
+			border: solid 3px red;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row-reverse;
+			width: 900px;
+		}
+
+		.child {
+			width: 30%;
+			height: 100px;
+			background-color: darksalmon;
+			border: solid 2px black;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="child" style="flex-grow: 1;">A</div>
+		<div class="child" style="flex-grow: 2;">B</div>
+	</div>
+	<script src="xxx.mjs" type="module"></script>
+</body>
+</html>
